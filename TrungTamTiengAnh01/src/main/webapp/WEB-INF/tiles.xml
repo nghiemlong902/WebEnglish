@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="master" template="/WEB-INF/views/layout/master-layout.jsp">
+		<put-attribute name="sidebar" value="/WEB-INF/views/layout/sidebar.jsp"/>
+		<put-attribute name="top-nav" value="/WEB-INF/views/layout/top-nav.jsp"/>
+		<put-attribute name="body" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"/>
+	</definition>
+	<definition	name="index" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
+	</definition>
+	<!-- <definition	name="login" template="/WEB-INF/views/login/login.jsp"/> -->
+	<definition	name="access-denied" template="/WEB-INF/views/access-denied/access-denied.jsp"/>
+	<definition	name="404-notfound" template="/WEB-INF/views/404/404-notfound.jsp"/>
+	
+	<definition	name="profile" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/profile/profile.jsp"/>
+	</definition>
+	
+	<definition	name="course-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/course/course-list.jsp"/>
+	</definition>
+	<definition	name="course-action" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/course/course-action.jsp"/>
+	</definition>
+	 
+	<definition	name="room-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/room/room-list.jsp"/>
+	</definition>
+	<definition	name="room-action" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/room/room-action.jsp"/>
+	</definition>
+	
+	<definition	name="room-student-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/room-student/room-student-list.jsp"/>
+	</definition>
+ 
+	<definition	name="user-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/user/user-list.jsp"/>
+	</definition>
+	<definition	name="user-action" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/user/user-action.jsp"/>
+	</definition>
+ 
+  	<definition	name="calendar" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/calendar/calendar.jsp"/>
+	</definition>
+ 
+  	<definition	name="student-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/student-course/student-list.jsp"/>
+	</definition>	
+  
+	<definition	name="chart" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/chart/chart.jsp"/>
+	</definition>
+	
+	 <definition	name="post-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/post/post-list.jsp"/>
+	</definition>	
+	
+	<definition	name="order-list" extends="master">
+		<put-attribute name="body" value="/WEB-INF/views/order-course/order-list.jsp"/>
+	</definition>
+	
+	<!-- client -->
+	<definition name="master-client" template="/WEB-INF/views/client/layout.jsp">
+		<put-attribute name="header"/>
+		<put-attribute name="banner"/>
+		<put-attribute name="body" />
+		<put-attribute name="footer" value="/WEB-INF/views/client/footer.jsp"/>
+	</definition>
+	
+	<definition	name="trang-chu" extends="master-client">
+		<put-attribute name="header" value="/WEB-INF/views/client/header1.jsp"/>
+		 <put-attribute name="banner" value="/WEB-INF/views/client/banner1.jsp"/>
+		 <put-attribute name="body" value="/WEB-INF/views/client/index/index.jsp"/>
+	</definition>
+	
+	<definition	name="khoa-hoc" extends="master-client"> 
+		<put-attribute name="header" value="/WEB-INF/views/client/header2.jsp"/>
+		<put-attribute name="banner" value="/WEB-INF/views/client/banner2.jsp"/>
+		 <put-attribute name="body" value="/WEB-INF/views/client/course/course.jsp"/>
+	</definition>
+	
+	<definition	name="login" extends="master-client"> 
+		<put-attribute name="header" value="/WEB-INF/views/client/header1.jsp"/>
+		<put-attribute name="banner" value="/WEB-INF/views/client/banner3.jsp"/>
+		 <put-attribute name="body" value="/WEB-INF/views/client/login/login.jsp"/>
+	</definition>
+	
+	<definition	name="dat-hang" template="/WEB-INF/views/client/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/client/header1.jsp"/>
+		<put-attribute name="banner" value="/WEB-INF/views/client/banner3.jsp"/>
+		 <put-attribute name="body" value="/WEB-INF/views/client/checkout.jsp"/>
+		 <put-attribute name="footer" value="/WEB-INF/views/client/footer.jsp"/>
+	</definition>
+	
+</tiles-definitions>
